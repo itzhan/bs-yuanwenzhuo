@@ -1,0 +1,10 @@
+# ── Mac 本地启动脚本（不追踪）──
+start.sh
+stop.sh
+.logs/
+
+# ── 系统文件 ──
+.DS_Store
+
+# ── Docker 数据 ──
+mysql_data/
