@@ -3,6 +3,7 @@ name: pharmacy-system
 services:
   mysql:
     image: mysql:8.0
+    platform: linux/amd64
     container_name: pharmacy-mysql
     restart: unless-stopped
     environment:

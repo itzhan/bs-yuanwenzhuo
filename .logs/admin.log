@@ -4,61 +4,18 @@
 
 ◐ [elegant-router] watcher ready
 
-  VITE v7.3.1   test   ready in 1554 ms
+  VITE v7.3.1   test   ready in 1641 ms
 
   ➜  Local:   http://localhost:9527/
   ➜  Network: http://192.168.31.156:9527/
   ➜  Network: http://192.168.139.3:9527/
   ➜  Network: http://192.168.194.0:9527/
   ➜  Network: http://192.168.158.0:9527/
-  ➜  Network: http://192.168.214.0:9527/
-  ➜  Network: http://198.18.0.1:9527/
   ➜  Vue DevTools: Open http://localhost:9527/__devtools__/ as a separate window
   ➜  Vue DevTools: Press Option(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
   ➜  UnoCSS Inspector: http://localhost:9527/__unocss/
 [proxy url]:  GET  /proxy-default/api/auth/info
 [real request url]: http://localhost:8080/api/auth/info
-Error: GET  http://localhost:8080/api/auth/info
-12:14:36 AM [vite] http proxy error: /api/auth/info
-AggregateError [ECONNREFUSED]: 
-    at internalConnectMultiple (node:net:1139:18)
-    at afterConnectMultiple (node:net:1714:7)
-[proxy url]:  POST  /proxy-default/api/auth/login
-[real request url]: http://localhost:8080/api/auth/login
-[proxy url]:  GET  /proxy-default/api/auth/info
-[real request url]: http://localhost:8080/api/auth/info
 [proxy url]:  GET  /proxy-default/api/dashboard
 [real request url]: http://localhost:8080/api/dashboard
-[proxy url]:  GET  /proxy-default/api/drugs?page=1&size=10
-[real request url]: http://localhost:8080/api/drugs?page=1&size=10
-[proxy url]:  GET  /proxy-default/api/categories
-[real request url]: http://localhost:8080/api/categories
-[proxy url]:  GET  /proxy-default/api/categories
-[real request url]: http://localhost:8080/api/categories
-[proxy url]:  GET  /proxy-default/api/suppliers?page=1&size=10
-[real request url]: http://localhost:8080/api/suppliers?page=1&size=10
-[proxy url]:  GET  /proxy-default/api/inventory?page=1&size=10
-[real request url]: http://localhost:8080/api/inventory?page=1&size=10
-[proxy url]:  GET  /proxy-default/api/drugs/all
-[real request url]: http://localhost:8080/api/drugs/all
-[proxy url]:  GET  /proxy-default/api/inventory-logs?page=1&size=10
-[real request url]: http://localhost:8080/api/inventory-logs?page=1&size=10
-[proxy url]:  GET  /proxy-default/api/drugs/all
-[real request url]: http://localhost:8080/api/drugs/all
-[proxy url]:  GET  /proxy-default/api/purchase-orders?page=1&size=10
-[real request url]: http://localhost:8080/api/purchase-orders?page=1&size=10
-[proxy url]:  GET  /proxy-default/api/drugs/all
-[real request url]: http://localhost:8080/api/drugs/all
-[proxy url]:  GET  /proxy-default/api/suppliers/all
-[real request url]: http://localhost:8080/api/suppliers/all
-[proxy url]:  GET  /proxy-default/api/sales?page=1&size=10
-[real request url]: http://localhost:8080/api/sales?page=1&size=10
-[proxy url]:  GET  /proxy-default/api/drugs/all
-[real request url]: http://localhost:8080/api/drugs/all
-[proxy url]:  GET  /proxy-default/api/expiry-alerts?page=1&size=10
-[real request url]: http://localhost:8080/api/expiry-alerts?page=1&size=10
-[proxy url]:  GET  /proxy-default/api/users?page=1&size=10
-[real request url]: http://localhost:8080/api/users?page=1&size=10
-[proxy url]:  GET  /proxy-default/api/operation-logs?page=1&size=10
-[real request url]: http://localhost:8080/api/operation-logs?page=1&size=10
  ELIFECYCLE  Command failed.
