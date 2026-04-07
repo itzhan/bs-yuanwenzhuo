@@ -44,7 +44,8 @@ export const generatedRoutes: GeneratedRoute[] = [
       title: '分类管理',
       icon: 'mdi:folder-outline',
       order: 3,
-      i18nKey: 'route.category'
+      i18nKey: 'route.category',
+      roles: ['R_SUPER', 'R_PHARMACIST']
     }
   },
   {
@@ -55,7 +56,8 @@ export const generatedRoutes: GeneratedRoute[] = [
       title: '药品管理',
       icon: 'mdi:pill',
       order: 2,
-      i18nKey: 'route.drug'
+      i18nKey: 'route.drug',
+      roles: ['R_SUPER', 'R_PHARMACIST']
     }
   },
   {
@@ -66,7 +68,8 @@ export const generatedRoutes: GeneratedRoute[] = [
       title: '效期预警',
       icon: 'mdi:alert-circle-outline',
       order: 9,
-      i18nKey: 'route.expiry-alert'
+      i18nKey: 'route.expiry-alert',
+      roles: ['R_SUPER', 'R_WAREHOUSE']
     }
   },
   {
@@ -77,7 +80,8 @@ export const generatedRoutes: GeneratedRoute[] = [
       title: '首页',
       icon: 'mdi:monitor-dashboard',
       order: 1,
-      i18nKey: 'route.home'
+      i18nKey: 'route.home',
+      roles: ['R_SUPER', 'R_PHARMACIST', 'R_WAREHOUSE']
     }
   },
   {
@@ -101,7 +105,8 @@ export const generatedRoutes: GeneratedRoute[] = [
       title: '库存管理',
       icon: 'mdi:warehouse',
       order: 5,
-      i18nKey: 'route.inventory'
+      i18nKey: 'route.inventory',
+      roles: ['R_SUPER', 'R_WAREHOUSE']
     }
   },
   {
@@ -112,7 +117,8 @@ export const generatedRoutes: GeneratedRoute[] = [
       title: '出入库记录',
       icon: 'mdi:clipboard-list',
       order: 6,
-      i18nKey: 'route.inventory-log'
+      i18nKey: 'route.inventory-log',
+      roles: ['R_SUPER', 'R_WAREHOUSE']
     }
   },
   {
@@ -135,7 +141,8 @@ export const generatedRoutes: GeneratedRoute[] = [
       title: '操作日志',
       icon: 'mdi:history',
       order: 11,
-      i18nKey: 'route.operation-log'
+      i18nKey: 'route.operation-log',
+      roles: ['R_SUPER']
     }
   },
   {
@@ -146,7 +153,8 @@ export const generatedRoutes: GeneratedRoute[] = [
       title: '采购管理',
       icon: 'mdi:cart-outline',
       order: 7,
-      i18nKey: 'route.purchase-order'
+      i18nKey: 'route.purchase-order',
+      roles: ['R_SUPER', 'R_WAREHOUSE']
     }
   },
   {
@@ -157,7 +165,8 @@ export const generatedRoutes: GeneratedRoute[] = [
       title: '销售记录',
       icon: 'mdi:point-of-sale',
       order: 8,
-      i18nKey: 'route.sale'
+      i18nKey: 'route.sale',
+      roles: ['R_SUPER', 'R_PHARMACIST']
     }
   },
   {
@@ -168,7 +177,8 @@ export const generatedRoutes: GeneratedRoute[] = [
       title: '供应商管理',
       icon: 'mdi:truck-delivery',
       order: 4,
-      i18nKey: 'route.supplier'
+      i18nKey: 'route.supplier',
+      roles: ['R_SUPER', 'R_WAREHOUSE']
     }
   },
   {
@@ -179,7 +189,8 @@ export const generatedRoutes: GeneratedRoute[] = [
       title: '用户管理',
       icon: 'mdi:account-group',
       order: 10,
-      i18nKey: 'route.user-manage'
+      i18nKey: 'route.user-manage',
+      roles: ['R_SUPER']
     }
   }
 ];

@@ -17,6 +17,14 @@
           <router-link to="/drugs" class="nav-link" active-class="active">
             <Search :size="16" /> 药品查询
           </router-link>
+          <template v-if="isDoctor">
+            <router-link to="/prescription" class="nav-link" active-class="active">
+              <FileText :size="16" /> 处方管理
+            </router-link>
+            <router-link to="/records" class="nav-link" active-class="active">
+              <ClipboardList :size="16" /> 记录管理
+            </router-link>
+          </template>
           <router-link to="/about" class="nav-link" active-class="active">
             <Info :size="16" /> 关于我们
           </router-link>
@@ -75,12 +83,14 @@
 import { ref, onMounted, computed, h } from 'vue'
 import { useRouter } from 'vue-router'
 import { NIcon } from 'naive-ui'
-import { Pill, Home, Search, Info, LogIn, UserRound, LogOut } from 'lucide-vue-next'
+import { Pill, Home, Search, Info, LogIn, UserRound, LogOut, FileText, ClipboardList } from 'lucide-vue-next'
 import { getUserInfo } from '../api'
+import { clearCachedRole } from '../router'
 
 const router = useRouter()
 const userInfo = ref<any>(null)
 const isLoggedIn = computed(() => !!localStorage.getItem('token'))
+const isDoctor = computed(() => userInfo.value?.role === 1)
 
 const userMenuOptions = [
   { label: '退出登录', key: 'logout', icon: () => h(NIcon, null, { default: () => h(LogOut, { size: 16 }) }) }
@@ -90,6 +100,7 @@ function handleUserMenu(key: string) {
   if (key === 'logout') {
     localStorage.removeItem('token')
     userInfo.value = null
+    clearCachedRole()
     router.push('/')
     window.location.reload()
   }

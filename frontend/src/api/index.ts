@@ -34,3 +34,46 @@ export function login(data: { username: string; password: string }) {
 export function getUserInfo() {
   return request.get('/auth/info')
 }
+
+/* ========== 处方管理（医师） ========== */
+
+/** 处方列表（默认只看自己的） */
+export function listPrescriptions(params: {
+  page?: number
+  size?: number
+  keyword?: string
+  status?: number | null
+  mineOnly?: boolean
+}) {
+  return request.get('/prescriptions', { params })
+}
+
+/** 处方详情 */
+export function getPrescription(id: number | string) {
+  return request.get(`/prescriptions/${id}`)
+}
+
+/** 开具处方 */
+export function createPrescription(data: any) {
+  return request.post('/prescriptions', data)
+}
+
+/** 修改处方 */
+export function updatePrescription(id: number | string, data: any) {
+  return request.put(`/prescriptions/${id}`, data)
+}
+
+/** 作废处方 */
+export function voidPrescription(id: number | string) {
+  return request.put(`/prescriptions/${id}/void`)
+}
+
+/** 查询患者用药记录 */
+export function getPatientMedication(params: { patientName?: string; patientPhone?: string }) {
+  return request.get('/prescriptions/patient', { params })
+}
+
+/** 搜索药品（复用 admin 侧药品接口） */
+export function searchDrugs(params: { page?: number; size?: number; keyword?: string }) {
+  return request.get('/drugs', { params })
+}
